@@ -6,6 +6,8 @@ firmwares both work; a CPU `--mine` node keeps the chain live between miners.
 
 ## Files
 - `genesis.json` — production genesis (import as-is)
+- `NODE_GUIDE.md` — full step-by-step: install → systemd → peering → safe RPC → troubleshooting
+- `scripts/rpc-filter.py` — deny-by-default JSON-RPC filter proxy (stdlib only) used on public endpoints
 
 ## Run a node (Ubuntu/Debian)
 ```
@@ -15,7 +17,7 @@ geth --datadir ./smc --port 30399 --http --http.addr 127.0.0.1 --http.port 8548 
 ```
 ## Binary
 The node client is the OctaSpace geth fork (upstream, unmodified):
-releases at https://github.com/octaspace-project/go-octa/releases
+releases at https://github.com/octaspace/go-octa/releases
 (we run v2.0.2 `geth-linux-amd64`; docker: `octaspace/go-octa`).
 SmartCore ships no node patches — the chain runs on the stock client with
 our `genesis.json`.
