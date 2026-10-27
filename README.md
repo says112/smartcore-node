@@ -13,8 +13,12 @@ geth --datadir ./smc init genesis.json
 geth --datadir ./smc --port 30399 --http --http.addr 127.0.0.1 --http.port 8548 \
      --http.api eth,net,web3 --maxpeers 30
 ```
-Binary used in production: OctaSpace geth v2.0.2 (`geth-linux-amd64`) — any
-ethash geth compatible with Homestead+ fork order on custom networkid works.
+## Binary
+The node client is the OctaSpace geth fork (upstream, unmodified):
+releases at https://github.com/octaspace-project/go-octa/releases
+(we run v2.0.2 `geth-linux-amd64`; docker: `octaspace/go-octa`).
+SmartCore ships no node patches — the chain runs on the stock client with
+our `genesis.json`.
 
 ## Public endpoints
 - RPC (filtered, read-only + `eth_sendRawTransaction`):
