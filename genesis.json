@@ -1,0 +1,41 @@
+{
+    "config": {
+        "chainId": 80080,
+        "homesteadBlock": 0,
+        "eip150Block": 0,
+        "eip155Block": 0,
+        "eip158Block": 0,
+        "byzantiumBlock": 0,
+        "constantinopleBlock": 0,
+        "petersburgBlock": 0,
+        "istanbulBlock": 0,
+        "berlinBlock": 0,
+        "londonBlock": 0,
+        "muirGlacierBlock": 0,
+        "blackeyeBlock": 0,
+        "dneprBlock": 0,
+        "mahasimBlock": 0,
+        "polarisBlock": 0,
+        "springwaterBlock": 0,
+        "zagamiBlock": 0,
+        "oldenburgBlock": 0,
+        "vegaBlock": 0,
+        "arcturusBlock": 0,
+        "octaBlock": 0,
+        "triangulumBlock": 0,
+        "quadratumBlock": 0,
+        "hexagonumBlock": 0,
+        "ethash": {}
+    },
+    "difficulty": "0x3B9ACA00",
+    "gasLimit": "0x1c9c380",
+    "extradata": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "alloc": {
+        "0xB29E173CE8BFfFc03e1C28E4d2b3Dca9c296b81A": {
+            "balance": "10000000000000000000000000"
+        },
+        "0xBA8F8B024922f74cA9726552e38208E376b145fd": {
+            "balance": "100000000000000000000000"
+        }
+    }
+}
