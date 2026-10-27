@@ -13,11 +13,15 @@ optional mining, troubleshooting. Time: ~10 minutes.
 ## 1. Download the client
 
 SmartCore runs on the stock OctaSpace geth fork — no patches, exact release
-`v2.0.2`:
+`v2.0.2`. Upstream: https://github.com/octaspace/go-octa/releases
+
+Direct mirror from this project (same binary our nodes run, sha256 next to it):
 
 ```bash
 mkdir -p ~/smc && cd ~/smc
-curl -LO https://github.com/octaspace/go-octa/releases/download/v2.0.2/geth-linux-amd64
+curl -LO https://coin.smartcore.su/geth-linux-amd64
+curl -LO https://coin.smartcore.su/geth-linux-amd64.sha256
+sha256sum -c geth-linux-amd64.sha256
 chmod +x geth-linux-amd64
 ./geth-linux-amd64 version   # OctaSpace version 2.0.2
 ```
@@ -77,15 +81,14 @@ If your public IP is behind NAT and you want the network to dial you, add
 
 ## 4. Peering (important on a young chain)
 
-The chain is too small to self-discover quickly. Use our static peers —
-create `data/static-nodes.json`:
+The chain is too small to self-discover quickly. Use our static peers — one
+command (the list is kept up to date):
 
-```json
-[
-  "enode://823348d874bb5eb855c2c65ec20a0831155f2cf8732c927f2181f08d1782533f0b26b7bdaa9f32d2e1289aa72338c3eb82a988c27dbe872653014a2f5fb6a795@83.221.222.51:30399",
-  "enode://51f9e7c3abc9f6f4f2a889f0c0ad55c1c58889f014d16ca6305e0650e9a7b6bf2b53ff64eab79a21671a2ddf29d6a5d52a42ec10907264dd2073e2ea15387cb0@185.207.133.38:30399"
-]
+```bash
+curl -o data/static-nodes.json https://coin.smartcore.su/peers.json
 ```
+
+(a checked-in copy is in this repo: `static-nodes.example.json`)
 
 Restart the node. Attach to verify:
 

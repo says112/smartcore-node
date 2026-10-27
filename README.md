@@ -19,6 +19,7 @@ geth --datadir ./smc --port 30399 --http --http.addr 127.0.0.1 --http.port 8548 
 The node client is the OctaSpace geth fork (upstream, unmodified):
 releases at https://github.com/octaspace/go-octa/releases
 (we run v2.0.2 `geth-linux-amd64`; docker: `octaspace/go-octa`).
+Direct mirror + sha256: https://coin.smartcore.su/geth-linux-amd64
 SmartCore ships no node patches — the chain runs on the stock client with
 our `genesis.json`.
 
