@@ -1,6 +1,6 @@
 # SmartCore node (geth fork) — chain launch kit
 
-SmartCore: private-but-public PoW ethash chain, chainId **80080** (0x138d0),
+SmartCore: custom public PoW ethash chain, chainId **80080** (0x138d0),
 1 SMC per block, premine 10.1M SMC. GPU miners (ethash) and ASIC-class
 firmwares both work; a CPU `--mine` node keeps the chain live between miners.
 
